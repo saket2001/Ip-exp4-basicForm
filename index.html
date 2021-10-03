@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Title</title>
+    <style>
+        body {
+            background: #7F00FF;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #9b47ee, #5344e0);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #9b47ee, #5344e0);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid py-2 d-flex justify-content-center">
+        <form class="w-full container shadow bg-white col-md-6 min-vh-100 mt-2 border rounded">
+            <div class="container rounded px-4 py-2 my-2 bg-primary text-white">
+                <h1 class="display-6 fw-bold mb-3">Hackitnow Internship Program </h1>
+                <p>For getting a golden chance to work with <b>Hackitnow technical team </b> in live projects, please
+                    fill this
+                    form</p>
+            </div>
+            <div class="container px-3 py-2">
+                <div class="form-group my-2">
+                    <label for="username" class="form-label">Username</label>
+                    <input id="username" class="form-control" type="text" name="username" required>
+                    <small class="form-text text-danger fw-normal" id="username-error"></small>
+                </div>
+                <div class="form-group my-2">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" class="form-control" type="email" name="email" required>
+                    <small class="form-text text-danger fw-normal" id="email-error"></small>
+                </div>
+                <div class="form-group my-2">
+                    <label for="password" class="form-label">Password</label>
+                    <input id="password" class="form-control" type="password" aria-hidden="true" name="password"
+                        required>
+                    <small class="form-text text-danger fw-normal" id="password-error"></small>
+                </div>
+                <div class="form-group my-2">
+                    <label for="birth-date" class="form-label">Birth Date</label>
+                    <input id="birth-date" class="form-control" type="date" name="birth-date" required>
+                    <small class="form-text text-danger fw-normal" id="date-error"></small>
+                </div>
+                <div class="form-group my-2">
+                    <label for="city" class="form-label">City</label>
+                    <select id="city" class="form-control" name="city" required>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="kerala">Kerala</option>
+                    </select>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="programming-lang" class="form-label h4 fw-light">Your Programming Languages</label>
+                </div>
+                <div class="form-check my-1">
+                    <input id="lang-python" class="form-check-input" type="checkbox" name="" value="Python">
+                    <label for="lang-python" class="form-check-label">Python</label>
+                </div>
+                <div class="form-check my-1">
+                    <input id="lang-python" class="form-check-input" type="checkbox" name="" value="Python">
+                    <label for="lang-python" class="form-check-label">Javascript</label>
+                </div>
+                <div class="form-check my-1">
+                    <input id="lang-python" class="form-check-input" type="checkbox" name="" value="Python">
+                    <label for="lang-python" class="form-check-label">Java</label>
+                </div>
+                <div class="form-check my-1">
+                    <input id="lang-python" class="form-check-input" type="checkbox" name="" value="Python">
+                    <label for="lang-python" class="form-check-label">C and C++</label>
+                </div>
+            </div>
+            <hr class="hr" />
+            <div class="mb-3 mx-2 d-grid gap-2">
+                <div class="custom-control custom-checkbox my-2 mx-auto">
+                    <input id="my-input" class="custom-control-input" type="checkbox" name="" value="true" required>
+                    By checking this box, you agree that provided
+                    information about you is accurate. And you agree to join our internship program
+                </div>
+                <div class="d-grid">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <script src="./index.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
