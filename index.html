@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Title</title>
+    <title>IP EXP4</title>
     <style>
         body {
             background: #7F00FF;
@@ -25,14 +25,14 @@
 
 <body>
     <div class="container-fluid py-2 d-flex justify-content-center">
-        <form class="w-half container shadow bg-white col-sm-6 min-vh-100 mt-2 border rounded">
-            <div class="container rounded px-4 py-2 my-2 bg-primary text-white">
+        <form class="w-half container shadow bg-white col-sm-6 min-vh-100 mt-2 border rounded overflow-hidden">
+            <div class="rounded px-4 py-2 my-2 bg-primary text-white">
                 <h1 class="display-6 fw-bold mb-3">Hackitnow Internship Program </h1>
                 <p>For getting a golden chance to work with <b>Hackitnow technical team </b> in live projects, please
                     fill this
                     form</p>
             </div>
-            <div class="container px-3 py-2">
+            <div class="px-3 py-2">
                 <div class="form-group my-2">
                     <label for="username" class="form-label">Username</label>
                     <input id="username" class="form-control" type="text" name="username" required>
@@ -57,11 +57,13 @@
                 <div class="form-group my-2">
                     <label for="city" class="form-label">City</label>
                     <select id="city" class="form-control" name="city" required>
+                        <option value="">Please Select Your City</option>
                         <option value="mumbai">Mumbai</option>
                         <option value="delhi">Delhi</option>
                         <option value="bangalore">Bangalore</option>
                         <option value="kerala">Kerala</option>
                     </select>
+                    <small class="form-text text-danger fw-normal" id="city-error"></small>
                 </div>
                 <div class="form-group mt-3">
                     <label for="programming-lang" class="form-label h4 fw-light">Your Programming Languages</label>
@@ -82,14 +84,16 @@
                     <input id="lang-python" class="form-check-input" type="checkbox" name="" value="Python">
                     <label for="lang-python" class="form-check-label">C and C++</label>
                 </div>
+                <small class="form-text text-danger fw-normal" id="lang-error"></small>
             </div>
             <hr class="hr" />
             <div class="mb-3 mx-2 d-grid gap-2">
                 <div class="custom-control custom-checkbox my-2 mx-auto">
-                    <input id="my-input" class="custom-control-input" type="checkbox" name="" value="true" required>
+                    <input id="agree-input" class="custom-control-input" type="checkbox" name="" value="true" required>
                     By checking this box, you agree that provided
                     information about you is accurate. And you agree to join our internship program
                 </div>
+                <small class="form-text text-danger fw-normal" id="agree-error"></small>
                 <div class="d-grid">
                     <button class="btn btn-primary" type="submit">Submit</button>
                 </div>

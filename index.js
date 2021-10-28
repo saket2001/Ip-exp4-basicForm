@@ -21,6 +21,7 @@ const usernameError = document.getElementById("username-error");
 const emailError = document.getElementById("email-error");
 const passwordError = document.getElementById("password-error");
 const dateError = document.getElementById("date-error");
+const cityError = document.getElementById("city-error");
 
 ////////////////////////////
 // event listeners
@@ -40,6 +41,10 @@ birthDataInput.addEventListener("blur", (e) => {
   validateData(e.target.value, "date");
 });
 
+cityInput.addEventListener("blur", (e) => {
+  validateData(e.target.value, "city");
+});
+
 ////////////////////////////
 // validation function
 const validateData = (value, type) => {
@@ -52,16 +57,21 @@ const validateData = (value, type) => {
       break;
 
     case "email":
-      const e_pattern = /^[a-zA-Z0-9+_.-]+@[(gmail|yahoo).com]+$/;
-      if (value.length < 3 || !e_pattern.test(value))
-        emailError.innerHTML =
-          "Your email should include @, gmail or yahoo and .com";
+      if (value.length < 3 || !value.includes("@gmail.com"))
+        emailError.innerHTML = "Your email should include @, gmail and .com";
       else emailError.innerHTML = "";
       break;
 
     case "password":
-      const p_pattern = /([a-z]|[A-Z])([A-Z]|[a-z])\d/;
-      if (value.length < 8 || !p_pattern.test(value))
+      const lower = /[a-z]/;
+      const Upper = /[A-Z]/;
+      const digit = /[0-9]*2/;
+      if (
+        value.length < 8 ||
+        !lower.test(value) ||
+        !Upper.test(value) ||
+        !digit.test(value)
+      )
         passwordError.innerHTML =
           "Your password should be of minimum length 8 and should contain the following <br/> One uppercase letter <br/> One lowercase letter <br/> Two numeric digits";
       else passwordError.innerHTML = "";
@@ -72,6 +82,10 @@ const validateData = (value, type) => {
       if (value === "" || d_pattern.test(value))
         dateError.innerHTML =
           "Not a valid date. Please enter in mm/dd/yyyy format";
+      else dateError.innerHTML = "";
+
+    case "city":
+      if (value === "") cityError.innerHTML = "Please select one city";
       else dateError.innerHTML = "";
   }
 };
